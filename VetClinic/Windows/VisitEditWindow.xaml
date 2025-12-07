@@ -1,0 +1,44 @@
+﻿<Window x:Class="VetClinic.Windows.VisitEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VetClinic.Windows"
+        mc:Ignorable="d"
+        Title="VisitEditWindow" Height="450" Width="800">
+    <Grid Background="#FAF0E6">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="15">
+                <Border Background="#8B7355" CornerRadius="3" Padding="10" Margin="0,0,0,15">
+                    <TextBlock x:Name="TitleText" Text="Редактирование визита" 
+                              Foreground="White" FontSize="16" 
+                              HorizontalAlignment="Center"/>
+                </Border>
+
+                <Label x:Name="PetLabel" Content="Питомец" Foreground="#8B7355" FontWeight="Bold"/>
+                <ComboBox x:Name="PetCombo" Height="30" Margin="0,2,0,10"/>
+
+                <Label x:Name="DateLabel" Content="Дата визита" Foreground="#8B7355" FontWeight="Bold"/>
+                <DatePicker x:Name="VisitDatePicker" Height="30" Margin="0,2,0,10"/>
+
+                <Label x:Name="SymptomsLabel" Content="Симптомы" Foreground="#8B7355" FontWeight="Bold"/>
+                <TextBox x:Name="SymptomsBox" Height="60" Margin="0,2,0,10" TextWrapping="Wrap"/>
+
+                <Label x:Name="DiagnosisLabel" Content="Диагноз" Foreground="#8B7355" FontWeight="Bold"/>
+                <TextBox x:Name="DiagnosisBox" Height="60" Margin="0,2,0,10" TextWrapping="Wrap"/>
+
+                <Label x:Name="PrescriptionLabel" Content="Назначения" Foreground="#8B7355" FontWeight="Bold"/>
+                <TextBox x:Name="PrescriptionBox" Height="60" Margin="0,2,0,15" TextWrapping="Wrap"/>
+
+                <StackPanel x:Name="ButtonsPanel" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button x:Name="SaveButton" Content="Сохранить" Width="100" Height="35" 
+                            Background="#6B8E23" Foreground="White" Margin="5"
+                            Click="SaveButton_Click"/>
+                    <Button x:Name="CancelButton" Content="Отмена" Width="100" Height="35"
+                            Background="#A0522D" Foreground="White" Margin="5"
+                            Click="CancelButton_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
